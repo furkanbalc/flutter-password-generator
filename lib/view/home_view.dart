@@ -3,6 +3,7 @@ import 'package:random_pass_generator/enum/strings_enum.dart';
 import 'package:random_pass_generator/view_model/home_view_model.dart';
 import 'package:random_pass_generator/widget/add_parameter_widget.dart';
 import 'package:random_pass_generator/widget/result_container_widget.dart';
+import 'package:shimmer/shimmer.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -26,8 +27,19 @@ class _HomeViewState extends HomeViewModel {
         children: [
           Expanded(
             child: ResultContainerWidget(
-              password: password,
               onPressed: fetchPassword,
+              child: isLoading
+                  ? Shimmer.fromColors(
+                      baseColor: Colors.grey,
+                      highlightColor: Colors.white,
+                      child: Text(AppStrings.generating.value,
+                          textAlign: TextAlign.center, style: Theme.of(context).textTheme.titleSmall),
+                    )
+                  : Text(
+                      password,
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+                    ),
             ),
           ),
           Padding(

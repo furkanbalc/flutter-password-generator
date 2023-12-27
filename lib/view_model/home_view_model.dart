@@ -10,7 +10,9 @@ abstract class HomeViewModel extends State<HomeView> {
   void initState() {
     super.initState();
     lenghtController = TextEditingController();
+    changeLoading();
     fetchPassword();
+    changeLoading();
   }
 
   late final TextEditingController lenghtController;
@@ -22,6 +24,13 @@ abstract class HomeViewModel extends State<HomeView> {
   bool specialChar = false;
   bool upperCase = false;
   int lenght = 12;
+  bool isLoading = false;
+
+  void changeLoading() {
+    setState(() {
+      isLoading = !isLoading;
+    });
+  }
 
   void changeNumber() {
     setState(() {
@@ -49,6 +58,7 @@ abstract class HomeViewModel extends State<HomeView> {
 
   Future<void> fetchPassword() async {
     String request = '';
+    changeLoading();
 
     if (number && upperCase && specialChar) {
       request = '$baseUrl?num=true&caps=true&char=true&len=$lenght';
@@ -80,5 +90,6 @@ abstract class HomeViewModel extends State<HomeView> {
         password = AppStrings.failedPass.value;
       });
     }
+    changeLoading();
   }
 }

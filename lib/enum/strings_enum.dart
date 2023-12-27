@@ -8,6 +8,7 @@ enum AppStrings {
   addUpperCase('Add upper case to the password.'),
   upperCase('Upper case'),
   generate('Generate'),
+  generating('Generating'),
   lenght('Lenght: '),
   failedPass('Failed to get password'),
   ;
