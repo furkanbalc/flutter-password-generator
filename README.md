@@ -12,4 +12,3 @@ This project was developed with flutter.
 
 The project generates random passwords according to the parameters given via the api.
 
-![app](https://github.com/furkanbalc/flutter-password-generator/assets/105873821/3260a75f-f501-4434-a585-439a5409e240)
