@@ -1,15 +1,24 @@
-# Flutter password generator
+# random_pass_generator
 
-This project was developed with flutter.
+A new Flutter project.
 
-## Materials
+## Getting Started
 
-- **Flutter MVVM Architecture:** The project tried to comply with the MVVM (Model-View-ViewModel) architecture at a simple level, which ensures that the code is organized and manageable.
+<<<<<<< HEAD
+This project is a starting point for a Flutter application.
+=======
 - **State Management:** Vanilla state management was used at a basic level.
 - **API:** https://github.com/fawazsullia/password-generator?tab=readme-ov-file
+>>>>>>> 322681bd10143e193d33fb27d4907f5c74488175
 
-## About The Project
+A few resources to get you started if this is your first Flutter project:
 
-The project generates random passwords according to the parameters given via the api.
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-![app](https://github.com/furkanbalc/flutter-password-generator/assets/105873821/3260a75f-f501-4434-a585-439a5409e240)
+<<<<<<< HEAD
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+=======
+>>>>>>> 322681bd10143e193d33fb27d4907f5c74488175

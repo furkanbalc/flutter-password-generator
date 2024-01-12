@@ -56,6 +56,7 @@ abstract class HomeViewModel extends State<HomeView> {
     });
   }
 
+  /// GET METHOD
   Future<void> fetchPassword() async {
     String request = '';
     changeLoading();
